@@ -285,7 +285,7 @@
 
                             <audio preload="none">
                                 <source
-                                    src="assets/audio/pearl-hart-preview.mp3"
+                                    src="assets/audio/Pearl_Hart.mp3"
                                     type="audio/mpeg"
                                 >
                             </audio>
@@ -390,7 +390,7 @@
                     <p class="eyebrow">About Tina</p>
                     <h3 class="visually-hidden">Tina's story</h3>
 
-                    <button class="content-card__media about-trigger" type="button" aria-haspopup="dialog" aria-controls="about-tina-modal">
+                    <a class="content-card__media" href="about.html">
                         <img
                             src="assets/images/cyberpunk_portrait_neon.jpg"
                             alt="Portrait of Tina"
@@ -398,11 +398,11 @@
                             height="600"
                             loading="lazy"
                         >
-                    </button>
+                    </a>
 
-                    <button class="button button--secondary about-trigger" type="button" aria-haspopup="dialog" aria-controls="about-tina-modal">
+                    <a class="button button--secondary" href="about.html">
                         Read more
-                    </button>
+                    </a>
                 </article>
 
                 <article class="content-card">
@@ -592,184 +592,6 @@
                     <button class="gallery-thumbnail" type="button" data-gallery-index="3" aria-label="View photo 4"><img src="assets/images/gallery/gallery-04.jpg" alt="Tina nun cosplay" width="240" height="160" loading="lazy"></button>
                     <button class="gallery-thumbnail" type="button" data-gallery-index="4" aria-label="View photo 5"><img src="assets/images/gallery/gallery-05.jpg" alt="Tina younger" width="240" height="160" loading="lazy"></button>
                     <button class="gallery-thumbnail" type="button" data-gallery-index="5" aria-label="View photo 6"><img src="assets/images/gallery/gallery-06.jpg" alt="Tina watches TV" width="240" height="160" loading="lazy"></button>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- About Tina / FAQ modal -->
-        <div
-            class="faq-modal"
-            id="about-tina-modal"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="faq-modal-title"
-            aria-hidden="true"
-        >
-            <div class="faq-modal__backdrop" data-faq-close></div>
-
-            <div class="faq-modal__dialog">
-                <header class="faq-modal__header">
-                    <div>
-                        <p class="eyebrow">About Tina</p>
-                        <h2 id="faq-modal-title">Ask Tina</h2>
-                    </div>
-
-                    <button
-                        class="faq-modal__close"
-                        type="button"
-                        aria-label="Close About Tina"
-                        data-faq-close
-                    >
-                        ×
-                    </button>
-                </header>
-
-                <div class="faq-modal__content">
-                    <aside class="faq-profile">
-                        <img
-                            src="assets/images/cyberpunk_portrait_neon.jpg"
-                            alt="Portrait of Tina Vale"
-                            width="700"
-                            height="900"
-                            loading="lazy"
-                        >
-
-                        <div class="faq-profile__text">
-                            <p class="eyebrow">Virtual artist</p>
-                            <p>
-                                Tina Vale is a fictional cyberpunk artist built
-                                through music, images and storytelling.
-                            </p>
-                        </div>
-                    </aside>
-
-                    <div class="faq-list">
-                        <article class="faq-item is-open">
-                            <h3>
-                                <button
-                                    class="faq-question"
-                                    type="button"
-                                    aria-expanded="true"
-                                    aria-controls="faq-answer-1"
-                                >
-                                    Who is Tina Vale?
-                                    <span aria-hidden="true"></span>
-                                </button>
-                            </h3>
-                            <div class="faq-answer" id="faq-answer-1">
-                                <p>
-                                    Tina Vale is a virtual cyberpunk artist and
-                                    fictional character with her own visual world,
-                                    personality and musical identity.
-                                </p>
-                            </div>
-                        </article>
-
-                        <article class="faq-item">
-                            <h3>
-                                <button
-                                    class="faq-question"
-                                    type="button"
-                                    aria-expanded="false"
-                                    aria-controls="faq-answer-2"
-                                >
-                                    What kind of music does Tina make?
-                                    <span aria-hidden="true"></span>
-                                </button>
-                            </h3>
-                            <div class="faq-answer" id="faq-answer-2" hidden>
-                                <p>
-                                    Dark cyberpunk electronic music driven by
-                                    heavy bass, hypnotic rhythms and atmospheric
-                                    female vocals.
-                                </p>
-                            </div>
-                        </article>
-
-                        <article class="faq-item">
-                            <h3>
-                                <button
-                                    class="faq-question"
-                                    type="button"
-                                    aria-expanded="false"
-                                    aria-controls="faq-answer-3"
-                                >
-                                    What is Neon Outlaws?
-                                    <span aria-hidden="true"></span>
-                                </button>
-                            </h3>
-                            <div class="faq-answer" id="faq-answer-3" hidden>
-                                <p>
-                                    Neon Outlaws is a cyberpunk album inspired by
-                                    legendary rebels and outlaws, reimagined in a
-                                    dark neon future.
-                                </p>
-                            </div>
-                        </article>
-
-                        <article class="faq-item">
-                            <h3>
-                                <button
-                                    class="faq-question"
-                                    type="button"
-                                    aria-expanded="false"
-                                    aria-controls="faq-answer-4"
-                                >
-                                    Is Tina a real person?
-                                    <span aria-hidden="true"></span>
-                                </button>
-                            </h3>
-                            <div class="faq-answer" id="faq-answer-4" hidden>
-                                <p>
-                                    Tina is a fictional virtual artist. Her music,
-                                    images and stories are part of an independent
-                                    creative project.
-                                </p>
-                            </div>
-                        </article>
-
-                        <article class="faq-item">
-                            <h3>
-                                <button
-                                    class="faq-question"
-                                    type="button"
-                                    aria-expanded="false"
-                                    aria-controls="faq-answer-5"
-                                >
-                                    Where can I follow the project?
-                                    <span aria-hidden="true"></span>
-                                </button>
-                            </h3>
-                            <div class="faq-answer" id="faq-answer-5" hidden>
-                                <p>
-                                    New music, videos and visual releases will be
-                                    shared through Tina's official website and
-                                    social channels.
-                                </p>
-                            </div>
-                        </article>
-
-                        <article class="faq-item">
-                            <h3>
-                                <button
-                                    class="faq-question"
-                                    type="button"
-                                    aria-expanded="false"
-                                    aria-controls="faq-answer-6"
-                                >
-                                    Can I contact Tina?
-                                    <span aria-hidden="true"></span>
-                                </button>
-                            </h3>
-                            <div class="faq-answer" id="faq-answer-6" hidden>
-                                <p>
-                                    Yes. Use the contact button at the bottom of
-                                    the website to send a message to the project.
-                                </p>
-                            </div>
-                        </article>
-                    </div>
                 </div>
             </div>
         </div>
