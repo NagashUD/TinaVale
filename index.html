@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tina Vale</title>
+    <meta
+        name="description"
+        content="Official website of Tina. Discover the cyberpunk album Neon Outlaws, music videos, photos, news and exclusive releases."
+    >
+
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Social sharing metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tina — Neon Outlaws">
+    <meta
+        property="og:description"
+        content="Enter Tina's cyberpunk universe and discover the album Neon Outlaws."
+    >
+    <meta property="og:image" content="assets/images/social-preview.jpg">
+    <meta property="og:url" content="https://example.com">
+
+    <meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header" id="top">
+        <div class="site-header__inner">
+            <a class="site-logo" href="#home" aria-label="Tina — Home">
+                <img
+                    src="assets/images/logo-tina.png"
+                    alt="Tina"
+                    width="150"
+                    height="70"
+                >
+            </a>
+
+            <button
+                class="navigation-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="main-navigation"
+                aria-label="Open navigation"
+            >
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </button>
+
+            <nav
+                class="main-navigation"
+                id="main-navigation"
+                aria-label="Main navigation"
+            >
+                <ul class="main-navigation__list">
+                    <li><a href="#home" aria-current="page">Home</a></li>
+                    <li><a href="#music">Music</a></li>
+                    <li><a href="#videos">Videos</a></li>
+                    <li><a href="#photos">Photos</a></li>
+                    <li><a href="#about">About Tina</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#store">Store</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <nav class="social-navigation" aria-label="Social media">
+    <ul class="social-navigation__list">
+        <li>
+            <a
+                href="#"
+                aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <img
+                    src="assets/images/icons/instaTina.jpg"
+                    alt=""
+                    width="24"
+                    height="24"
+                >
+            </a>
+        </li>
+
+        <li>
+            <a
+                href="#"
+                aria-label="YouTube"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <img
+                    src="assets/images/icons/youtubeTina.jpg"
+                    alt=""
+                    width="24"
+                    height="24"
+                >
+            </a>
+        </li>
+
+        <li>
+            <a
+                href="#"
+                aria-label="Spotify"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <img
+                    src="assets/images/icons/spotifyTina.jpg"
+                    alt=""
+                    width="24"
+                    height="24"
+                >
+            </a>
+        </li>
+
+        <li>
+            <a href="#contact" aria-label="Contact Tina">
+                <img
+                    src="assets/images/icons/emailTina.jpg"
+                    alt=""
+                    width="24"
+                    height="24"
+                >
+            </a>
+        </li>
+    </ul>
+</nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero -->
+        <section class="hero" id="home" aria-labelledby="hero-title">
+            <div class="hero__media" aria-hidden="true">
+                <picture>
+                    <source
+                        srcset="assets/images/hero-tina.png"
+                        type="image/webp"
+                    >
+                    <img
+                        src="assets/images/hero-tina.png"
+                        alt=""
+                        width="1920"
+                        height="1080"
+                    >
+                </picture>
+            </div>
+
+            <div class="hero__content">
+                <p class="hero__artist">Tina</p>
+
+                <h1 class="hero__title" id="hero-title">
+                    Neon Outlaws
+                </h1>
+
+                <p class="hero__tagline">
+                    We don’t follow the system.<br>
+                    <strong>We hack it.</strong>
+                </p>
+
+                <div class="hero__actions">
+                    <a class="button button--primary" href="#music">
+                        Listen now
+                    </a>
+
+                    <a class="button button--secondary" href="#videos">
+                        Latest video
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Album -->
+        <section class="album-section" id="music" aria-labelledby="album-title">
+            <div class="album-section__inner">
+                <figure class="album-cover">
+                    <img
+                        src="assets/images/neon-outlaws-cover.png"
+                        alt="Neon Outlaws album cover by Tina"
+                        width="800"
+                        height="800"
+                    >
+                </figure>
+
+                <div class="album-details">
+                    <p class="eyebrow">New album</p>
+                    <h2 id="album-title">Neon Outlaws</h2>
+                    <p class="album-details__status">Out now</p>
+
+                    <p class="album-details__description">
+                        A dark cyberpunk journey through rebellion, love and
+                        neon-soaked streets. Eleven tracks. No rules.
+                    </p>
+
+                    <ol class="track-list" aria-label="Featured album tracks">
+                        <li class="track" data-track-id="ma-barker">
+                            <button
+                                class="track__play"
+                                type="button"
+                                aria-label="Play Ma Barker"
+                            >
+                                Play
+                            </button>
+
+                            <span class="track__number">01.</span>
+                            <span class="track__title">Ma Barker</span>
+                            <time class="track__duration" datetime="PT3M52S">
+                                03:52
+                            </time>
+
+                            <audio preload="none">
+                                <source
+                                    src="assets/audio/ma-barker-preview.mp3"
+                                    type="audio/mpeg"
+                                >
+                            </audio>
+                        </li>
+
+                        <li class="track" data-track-id="bonnie-and-clyde">
+                            <button
+                                class="track__play"
+                                type="button"
+                                aria-label="Play Bonnie and Clyde"
+                            >
+                                Play
+                            </button>
+
+                            <span class="track__number">02.</span>
+                            <span class="track__title">Bonnie &amp; Clyde</span>
+                            <time class="track__duration" datetime="PT4M11S">
+                                04:11
+                            </time>
+
+                            <audio preload="none">
+                                <source
+                                    src="assets/audio/bonnie-and-clyde-preview.mp3"
+                                    type="audio/mpeg"
+                                >
+                            </audio>
+                        </li>
+
+                        <li class="track" data-track-id="belle-starr">
+                            <button
+                                class="track__play"
+                                type="button"
+                                aria-label="Play Belle Starr"
+                            >
+                                Play
+                            </button>
+
+                            <span class="track__number">03.</span>
+                            <span class="track__title">Belle Starr</span>
+                            <time class="track__duration" datetime="PT4M27S">
+                                04:27
+                            </time>
+
+                            <audio preload="none">
+                                <source
+                                    src="assets/audio/belle-starr-preview.mp3"
+                                    type="audio/mpeg"
+                                >
+                            </audio>
+                        </li>
+
+                        <li class="track" data-track-id="pearl-hart">
+                            <button
+                                class="track__play"
+                                type="button"
+                                aria-label="Play Pearl Hart"
+                            >
+                                Play
+                            </button>
+
+                            <span class="track__number">04.</span>
+                            <span class="track__title">Pearl Hart</span>
+                            <time class="track__duration" datetime="PT3M48S">
+                                03:48
+                            </time>
+
+                            <audio preload="none">
+                                <source
+                                    src="assets/audio/pearl-hart-preview.mp3"
+                                    type="audio/mpeg"
+                                >
+                            </audio>
+                        </li>
+                    </ol>
+
+                   
+                </div>
+
+                <aside
+                    class="purchase-card"
+                    id="store"
+                    aria-labelledby="purchase-title"
+                >
+                    <h3 id="purchase-title">Get the album</h3>
+
+                    <p class="purchase-card__price">
+                        <span class="visually-hidden">Price:</span>
+                        €9.99
+                    </p>
+
+                    <p>
+                        High quality MP3<br>
+                        Cover artwork<br>
+                        Instant download
+                    </p>
+
+                    <p>Support independent music.</p>
+
+                    <button
+                        class="button button--primary purchase-button"
+                        type="button"
+                        data-product-id="neon-outlaws-digital"
+                    >
+                        Buy album
+                    </button>
+
+                    <ul
+                        class="payment-methods"
+                        aria-label="Future accepted payment methods"
+                    >
+                        <li>PayPal</li>
+                        <li>Visa</li>
+                        <li>Mastercard</li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Featured content -->
+        <section
+            class="featured-content"
+            aria-labelledby="featured-content-title"
+        >
+            <h2 class="visually-hidden" id="featured-content-title">
+                Discover Tina
+            </h2>
+
+            <div class="card-grid">
+                <article class="content-card" id="videos">
+                    <p class="eyebrow">Latest video</p>
+                    <h3>Exit City</h3>
+
+                    <a class="content-card__media" href="videos.html">
+                        <img
+                            src="assets/images/latest-video.jpg"
+                            alt="Tina in the Exit City music video"
+                            width="800"
+                            height="600"
+                            loading="lazy"
+                        >
+                        <span class="content-card__play" aria-hidden="true">
+                            Play
+                        </span>
+                    </a>
+
+                    <a class="button button--secondary" href="videos.html">
+                        Watch now
+                    </a>
+                </article>
+
+                <article class="content-card" id="photos">
+                    <p class="eyebrow">Photos</p>
+                    <h3 class="visually-hidden">Photo gallery</h3>
+
+                    <button class="content-card__media gallery-trigger" type="button" aria-haspopup="dialog" aria-controls="photo-gallery-modal">
+                        <img
+                            src="assets/images/gallery/gallery-01.jpg"
+                            alt="Tina sitting in a cyberpunk bar"
+                            width="800"
+                            height="600"
+                            loading="lazy"
+                        >
+                    </button>
+
+                    <button class="button button--secondary gallery-trigger" type="button" aria-haspopup="dialog" aria-controls="photo-gallery-modal">
+                        View gallery
+                    </button>
+                </article>
+
+                <article class="content-card" id="about">
+                    <p class="eyebrow">About Tina</p>
+                    <h3 class="visually-hidden">Tina's story</h3>
+
+                    <a class="content-card__media" href="about.html">
+                        <img
+                            src="assets/images/about-tina.jpg"
+                            alt="Portrait of Tina"
+                            width="800"
+                            height="600"
+                            loading="lazy"
+                        >
+                    </a>
+
+                    <a class="button button--secondary" href="about.html">
+                        Read more
+                    </a>
+                </article>
+
+                <article class="content-card">
+                    <p class="eyebrow">Previous Albums</p>
+                    <h3>CyberDreams</h3>
+
+                    <div class="content-card__media">
+                        <img
+                            src="assets/images/cyberdreams.png"
+                            alt="Crowd silhouettes under pink stage lights"
+                            width="800"
+                            height="600"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <a class="button button--secondary" href="#news">
+                        More info
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <!-- News -->
+        <section class="news-section" id="news" aria-labelledby="news-title">
+            <div class="section-heading">
+                <p class="eyebrow">Latest transmissions</p>
+                <h2 id="news-title">News</h2>
+            </div>
+
+            <div class="news-grid">
+                <article class="news-card">
+                    <a href="news/neon-outlaws-release.html">
+                        <img
+                            src="assets/images/neon-outlaws-cover.png"
+                            alt=""
+                            width="900"
+                            height="600"
+                            loading="lazy"
+                        >
+
+                        <div class="news-card__content">
+                            <time datetime="2026-08-04">August 4, 2026</time>
+                            <h3>Neon Outlaws is coming</h3>
+                            <p>
+                                Tina’s first cyberpunk album enters its final
+                                production phase.
+                            </p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="news-card">
+                    <a href="news/exit-city-video.html">
+                        <img
+                            src="assets/images/Tina_sing.jpg"
+                            alt=""
+                            width="900"
+                            height="600"
+                            loading="lazy"
+                        >
+
+                        <div class="news-card__content">
+                            <time datetime="2026-08-01">August 1, 2026</time>
+                            <h3>Behind the scenes of Exit City</h3>
+                            <p>
+                                A first look at Tina’s latest neon-soaked
+                                music video.
+                            </p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+
+            <a class="button button--secondary" href="news.html">
+                View all news
+            </a>
+        </section>
+
+        <!-- Newsletter and social post -->
+        <section
+            class="community-section"
+            aria-labelledby="community-title"
+        >
+            <div class="newsletter">
+                <img
+                    class="newsletter__symbol"
+                    src="assets/images/tina-symbol.png"
+                    alt=""
+                    width="220"
+                    height="220"
+                    loading="lazy"
+                >
+
+                <div class="newsletter__content">
+                    <h2 id="community-title">Stay in the loop</h2>
+
+                    <p>
+                        Get news, music drops and exclusive content.
+                    </p>
+
+                    <form
+                        class="newsletter-form"
+                        action="#"
+                        method="post"
+                    >
+                        <label class="visually-hidden" for="newsletter-email">
+                            Email address
+                        </label>
+
+                        <input
+                            id="newsletter-email"
+                            name="email"
+                            type="email"
+                            autocomplete="email"
+                            placeholder="Your email"
+                            required
+                        >
+
+                        <button class="button button--primary" type="submit">
+                            Join
+                        </button>
+                    </form>
+
+                    <p class="form-message" aria-live="polite"></p>
+                </div>
+            </div>
+
+            <article class="social-post" aria-label="Latest post from Tina">
+                <img
+                    class="social-post__avatar"
+                    src="assets/images/tina-avatar.jpg"
+                    alt=""
+                    width="120"
+                    height="120"
+                    loading="lazy"
+                >
+
+                <div class="social-post__content">
+                    <header>
+                        <strong>Tina</strong>
+                        <span aria-label="Verified artist">✓</span>
+                        <p>@neonoutlawstina</p>
+                    </header>
+
+                    <p>
+                        The city never sleeps. Neither do we.<br>
+                        New music coming.<br>
+                        <a href="#">#NeonOutlaws</a>
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact-section" id="contact" aria-labelledby="contact-title">
+            <div class="section-heading">
+                <p class="eyebrow">Contact</p>
+                <h2 id="contact-title">Enter the network</h2>
+            </div>
+
+            <p>
+                For press, collaborations, licensing and professional enquiries.
+            </p>
+
+            <a class="button button--secondary" href="mailto:contact@example.com">
+                Contact Tina
+            </a>
+        </section>
+
+        <div class="gallery-modal" id="photo-gallery-modal" role="dialog" aria-modal="true" aria-labelledby="gallery-modal-title" aria-hidden="true">
+            <div class="gallery-modal__backdrop" data-gallery-close></div>
+            <div class="gallery-modal__dialog">
+                <header class="gallery-modal__header">
+                    <div><p class="eyebrow">Photos</p><h2 id="gallery-modal-title">Tina Gallery</h2></div>
+                    <button class="gallery-modal__close" type="button" aria-label="Close gallery" data-gallery-close>×</button>
+                </header>
+                <div class="gallery-viewer">
+                    <button class="gallery-viewer__arrow gallery-viewer__arrow--previous" type="button" aria-label="Previous photo" data-gallery-previous>‹</button>
+                    <figure class="gallery-viewer__figure">
+                        <img class="gallery-viewer__image" src="assets/images/gallery/gallery-01.jpg" alt="Tina in a cyberpunk environment" width="1400" height="900">
+                        <figcaption class="gallery-viewer__caption"><span data-gallery-caption>Tina — Neon Outlaws</span><span class="gallery-viewer__counter" data-gallery-counter>1 / 6</span></figcaption>
+                    </figure>
+                    <button class="gallery-viewer__arrow gallery-viewer__arrow--next" type="button" aria-label="Next photo" data-gallery-next>›</button>
+                </div>
+                <div class="gallery-thumbnails" aria-label="Choose a photo">
+                    <button class="gallery-thumbnail is-active" type="button" data-gallery-index="0" aria-label="View photo 1" aria-current="true"><img src="assets/images/gallery/gallery-01.jpg" alt="" width="240" height="160" loading="lazy"></button>
+                    <button class="gallery-thumbnail" type="button" data-gallery-index="1" aria-label="View photo 2"><img src="assets/images/gallery/gallery-02.jpg" alt="" width="240" height="160" loading="lazy"></button>
+                    <button class="gallery-thumbnail" type="button" data-gallery-index="2" aria-label="View photo 3"><img src="assets/images/gallery/gallery-03.jpg" alt="" width="240" height="160" loading="lazy"></button>
+                    <button class="gallery-thumbnail" type="button" data-gallery-index="3" aria-label="View photo 4"><img src="assets/images/gallery/gallery-04.jpg" alt="" width="240" height="160" loading="lazy"></button>
+                    <button class="gallery-thumbnail" type="button" data-gallery-index="4" aria-label="View photo 5"><img src="assets/images/gallery/gallery-05.jpg" alt="" width="240" height="160" loading="lazy"></button>
+                    <button class="gallery-thumbnail" type="button" data-gallery-index="5" aria-label="View photo 6"><img src="assets/images/gallery/gallery-06.jpg" alt="" width="240" height="160" loading="lazy"></button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="site-footer">
+        <nav class="footer-navigation" aria-label="Footer navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#videos">Videos</a></li>
+                <li><a href="#photos">Photos</a></li>
+                <li><a href="#about">About Tina</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#store">Store</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <p>
+            © 2026 Tina Vale. All rights reserved.
+        </p>
+
+        <nav class="legal-navigation" aria-label="Legal information">
+            <ul>
+                <li><a href="legal-notice.html">Legal notice</a></li>
+                <li><a href="privacy-policy.html">Privacy policy</a></li>
+                <li><a href="terms-of-sale.html">Terms of sale</a></li>
+            </ul>
+        </nav>
+
+        <a class="back-to-top" href="#top" aria-label="Back to top">
+            ↑
+        </a>
+    </footer>
+
+    <script src="assets/js/app.js" defer></script>
+</body>
+</html>

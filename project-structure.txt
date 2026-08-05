@@ -1,0 +1,35 @@
+tina-neon-outlaws/
+├── index.html
+├── album.html
+├── videos.html
+├── photos.html
+├── about.html
+├── news.html
+├── legal-notice.html
+├── privacy-policy.html
+├── terms-of-sale.html
+└── assets/
+    ├── css/
+    │   └── style.css
+    ├── js/
+    │   └── app.js
+    ├── audio/
+    │   ├── ma-barker-preview.mp3
+    │   ├── bonnie-and-clyde-preview.mp3
+    │   ├── belle-starr-preview.mp3
+    │   └── pearl-hart-preview.mp3
+    └── images/
+        ├── logo-tina.svg
+        ├── tina-symbol.svg
+        ├── hero-tina.jpg
+        ├── hero-tina.webp
+        ├── neon-outlaws-cover.jpg
+        ├── latest-video.jpg
+        ├── gallery-preview.jpg
+        ├── about-tina.jpg
+        ├── tour-coming-soon.jpg
+        ├── tina-avatar.jpg
+        ├── news-album-release.jpg
+        ├── news-exit-city.jpg
+        ├── social-preview.jpg
+        └── favicon.png
