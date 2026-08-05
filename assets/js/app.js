@@ -1,5 +1,5 @@
 /**
- * Tina Vale — Neon Outlaws
+ * Tina Vale - Neon Outlaws
  * Compact album preview player
  */
 
