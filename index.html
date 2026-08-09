@@ -119,16 +119,16 @@
             </a>
         </li>
 
-        <li>
-            <a href="#contact" aria-label="Contact Tina">
-                <img
-                    src="assets/images/icons/emailTina.jpg"
-                    alt=""
-                    width="24"
-                    height="24"
-                >
-            </a>
-        </li>
+  <li>
+    <a href="mailto:xxtinavalexx@hotmail.com" aria-label="Contact Tina">
+        <img
+            src="assets/images/icons/emailTina.jpg"
+            alt=""
+            width="24"
+            height="24"
+        >
+    </a>
+</li>
     </ul>
 </nav>
         </div>
@@ -431,7 +431,13 @@
 
             <div class="news-grid">
                 <article class="news-card">
-                    <a href="news/neon-outlaws-release.html">
+                    <button
+                        class="news-card__trigger news-trigger"
+                        type="button"
+                        data-news-target="neon-outlaws"
+                        aria-haspopup="dialog"
+                        aria-controls="news-modal"
+                    >
                         <img
                             src="assets/images/neon-outlaws-cover.png"
                             alt=""
@@ -448,11 +454,17 @@
                                 production phase.
                             </p>
                         </div>
-                    </a>
+                    </button>
                 </article>
 
                 <article class="news-card">
-                    <a href="news/exit-city-video.html">
+                    <button
+                        class="news-card__trigger news-trigger"
+                        type="button"
+                        data-news-target="exit-city"
+                        aria-haspopup="dialog"
+                        aria-controls="news-modal"
+                    >
                         <img
                             src="assets/images/Tina_sing.jpg"
                             alt=""
@@ -469,13 +481,9 @@
                                 music video.
                             </p>
                         </div>
-                    </a>
+                    </button>
                 </article>
             </div>
-
-            <a class="button button--secondary" href="news.html">
-                View all news
-            </a>
         </section>
 
         <!-- Newsletter and social post -->
@@ -528,44 +536,50 @@
             </div>
 
             <article class="social-post" aria-label="Latest post from Tina">
-                <img
-                    class="social-post__avatar"
-                    src="assets/images/gallery/gallery-05.jpg"
-                    alt=""
-                    width="120"
-                    height="120"
-                    loading="lazy"
-                >
+    <img
+        class="social-post__avatar"
+        src="assets/images/gallery/gallery-05.jpg"
+        alt=""
+        width="120"
+        height="120"
+        loading="lazy"
+    >
 
-                <div class="social-post__content">
-                    <header>
-                        <strong>Tina</strong>
-                        <span aria-label="Verified artist">✓</span>
-                        <p>@neonoutlawstina</p>
-                    </header>
+    <div class="social-post__content">
+        <header>
+            <strong>Tina</strong>
+            <span aria-label="Official account">✓</span>
+            <p>
+    <a
+        href="https://www.instagram.com/tina_override/"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        @tina_override
+    </a>
+</p>
+        </header>
 
-                    <p>
-                        The city never sleeps. Neither do we.<br>
-                        New music coming.<br>
-                        <a href="#">#NeonOutlaws</a>
-                    </p>
-                </div>
-            </article>
+        <p>
+            The city never sleeps. Neither do I.<br>
+            New music is coming.<br>
+            <span class="social-hashtag">#NeonOutlaws</span>
+        </p>
+    </div>
+</article>
         </section>
 
-        <!-- Contact -->
-        <section class="contact-section" id="contact" aria-labelledby="contact-title">
-            <div class="section-heading">
-                <p class="eyebrow">Contact</p>
-                <h2 id="contact-title">Enter the network</h2>
-            </div>
+    <!-- Contact -->
+<section class="contact-section" id="contact" aria-labelledby="contact-title">
+    <div class="section-heading">
+        <p class="eyebrow">Contact</p>
+        <h2 id="contact-title">Enter the network</h2>
+    </div>
 
-          
-
-            <a class="button button--secondary" href="mailto:contact@example.com">
-                Contact Tina
-            </a>
-        </section>
+    <a class="button button--secondary" href="mailto:xxtinavalexx@hotmail.com">
+        Contact Tina
+    </a>
+</section>
 
         <div class="gallery-modal" id="photo-gallery-modal" role="dialog" aria-modal="true" aria-labelledby="gallery-modal-title" aria-hidden="true">
             <div class="gallery-modal__backdrop" data-gallery-close></div>
@@ -595,6 +609,93 @@
 
 
 
+
+
+        <!-- News modal -->
+        <div
+            class="news-modal"
+            id="news-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="news-modal-title"
+            aria-hidden="true"
+        >
+            <div class="news-modal__backdrop" data-news-close></div>
+
+            <div class="news-modal__dialog">
+                <header class="news-modal__header">
+                    <div>
+                        <p class="eyebrow">Latest transmission</p>
+                        <h2 id="news-modal-title">News</h2>
+                    </div>
+
+                    <button
+                        class="news-modal__close"
+                        type="button"
+                        aria-label="Close news"
+                        data-news-close
+                    >
+                        ×
+                    </button>
+                </header>
+
+                <div class="news-modal__content">
+                    <article class="news-modal__article" data-news-article="neon-outlaws" hidden>
+                        <figure class="news-modal__media">
+                            <img
+                                src="assets/images/neon-outlaws-cover.png"
+                                alt="Neon Outlaws album cover"
+                                width="900"
+                                height="900"
+                                loading="lazy"
+                            >
+                        </figure>
+
+                        <div class="news-modal__copy">
+                            <time datetime="2026-08-04">August 4, 2026</time>
+                            <h3>Neon Outlaws is coming</h3>
+                            <p>
+                                Neon Outlaws is entering its final production phase.
+                                The album brings together Tina’s cyberpunk sound with
+                                stories of rebellion, love and legendary outlaws
+                                reimagined under neon lights.
+                            </p>
+                            <p>
+                                Final mixes and visual work are now being prepared.
+                                More details and release information will be shared
+                                here as the project gets closer to launch.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="news-modal__article" data-news-article="exit-city" hidden>
+                        <figure class="news-modal__media">
+                            <img
+                                src="assets/images/Tina_sing.jpg"
+                                alt="Tina during a recording session"
+                                width="900"
+                                height="900"
+                                loading="lazy"
+                            >
+                        </figure>
+
+                        <div class="news-modal__copy">
+                            <time datetime="2026-08-01">August 1, 2026</time>
+                            <h3>Behind the scenes of Exit City</h3>
+                            <p>
+                                A first look behind the scenes of Exit City, a
+                                neon-soaked music video built around dark electronic
+                                textures and a cinematic cyberpunk atmosphere.
+                            </p>
+                            <p>
+                                More material from the project and future videos will
+                                be added to the site as production continues.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
 
         <!-- About Tina / FAQ modal -->
         <div
