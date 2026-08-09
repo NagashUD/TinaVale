@@ -278,3 +278,84 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+/* =========================================================
+   News modal
+   ========================================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.querySelector("#news-modal");
+    const triggers = [...document.querySelectorAll(".news-trigger")];
+
+    if (!modal || !triggers.length) {
+        return;
+    }
+
+    const closeButtons = [...modal.querySelectorAll("[data-news-close]")];
+    const articles = [...modal.querySelectorAll("[data-news-article]")];
+    const modalTitle = modal.querySelector("#news-modal-title");
+    let lastFocusedElement = null;
+
+    const showArticle = (articleId) => {
+        const selectedArticle = articles.find(
+            (article) => article.dataset.newsArticle === articleId
+        );
+
+        if (!selectedArticle) {
+            return false;
+        }
+
+        articles.forEach((article) => {
+            article.hidden = article !== selectedArticle;
+        });
+
+        const articleTitle = selectedArticle.querySelector("h3")?.textContent?.trim();
+
+        if (modalTitle && articleTitle) {
+            modalTitle.textContent = articleTitle;
+        }
+
+        return true;
+    };
+
+    const openModal = (articleId) => {
+        if (!showArticle(articleId)) {
+            return;
+        }
+
+        lastFocusedElement = document.activeElement;
+        modal.classList.add("is-open");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("news-is-open");
+
+        window.setTimeout(() => {
+            modal.querySelector(".news-modal__close")?.focus();
+        }, 50);
+    };
+
+    const closeModal = () => {
+        modal.classList.remove("is-open");
+        modal.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("news-is-open");
+
+        if (lastFocusedElement instanceof HTMLElement) {
+            lastFocusedElement.focus();
+        }
+    };
+
+    triggers.forEach((trigger) => {
+        trigger.addEventListener("click", () => {
+            openModal(trigger.dataset.newsTarget);
+        });
+    });
+
+    closeButtons.forEach((button) => {
+        button.addEventListener("click", closeModal);
+    });
+
+    modal.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            closeModal();
+        }
+    });
+});
+
