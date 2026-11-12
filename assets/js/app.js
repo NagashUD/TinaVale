@@ -180,7 +180,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* Photo gallery modal */
-document.addEventListener("DOMContentLoaded",()=>{const modal=document.querySelector("#photo-gallery-modal"),triggers=[...document.querySelectorAll(".gallery-trigger")];if(!modal||!triggers.length)return;const close=[...modal.querySelectorAll("[data-gallery-close]")],prev=modal.querySelector("[data-gallery-previous]"),next=modal.querySelector("[data-gallery-next]"),image=modal.querySelector(".gallery-viewer__image"),caption=modal.querySelector("[data-gallery-caption]"),counter=modal.querySelector("[data-gallery-counter]"),thumbs=[...modal.querySelectorAll("[data-gallery-index]")],photos=[1,2,3,4,5,6].map((n)=>({src:`assets/images/gallery/gallery-${String(n).padStart(2,"0")}.jpg`,alt:`Tina gallery photo ${n}`,caption:["Tina after a recording session","Tina is eating an ice cream at her friend's yard","Tina as a vampire","Tina nun cosplay","Tina younger","Tina watches TV"][n-1]}));let current=0,lastFocus=null;const update=(i)=>{current=(i+photos.length)%photos.length;const p=photos[current];image.classList.add("is-changing");setTimeout(()=>{image.src=p.src;image.alt=p.alt;caption.textContent=p.caption;counter.textContent=`${current+1} / ${photos.length}`;thumbs.forEach((t,j)=>{t.classList.toggle("is-active",j===current);j===current?t.setAttribute("aria-current","true"):t.removeAttribute("aria-current")});image.classList.remove("is-changing")},90)};const open=()=>{lastFocus=document.activeElement;modal.classList.add("is-open");modal.setAttribute("aria-hidden","false");document.body.classList.add("gallery-is-open");update(current);setTimeout(()=>modal.querySelector(".gallery-modal__close")?.focus(),50)};const shut=()=>{modal.classList.remove("is-open");modal.setAttribute("aria-hidden","true");document.body.classList.remove("gallery-is-open");lastFocus?.focus?.()};triggers.forEach(t=>t.addEventListener("click",open));close.forEach(b=>b.addEventListener("click",shut));prev?.addEventListener("click",()=>update(current-1));next?.addEventListener("click",()=>update(current+1));thumbs.forEach(t=>t.addEventListener("click",()=>update(Number(t.dataset.galleryIndex))));modal.addEventListener("keydown",e=>{if(e.key==="Escape")shut();if(e.key==="ArrowLeft")update(current-1);if(e.key==="ArrowRight")update(current+1)})});
+document.addEventListener("DOMContentLoaded",()=>{const modal=document.querySelector("#photo-gallery-modal"),triggers=[...document.querySelectorAll(".gallery-trigger")];if(!modal||!triggers.length)return;const close=[...modal.querySelectorAll("[data-gallery-close]")],prev=modal.querySelector("[data-gallery-previous]"),next=modal.querySelector("[data-gallery-next]"),image=modal.querySelector(".gallery-viewer__image"),caption=modal.querySelector("[data-gallery-caption]"),counter=modal.querySelector("[data-gallery-counter]"),thumbs=[...modal.querySelectorAll("[data-gallery-index]")],photos=[1,2,3,4,5,6].map((n)=>({src:`assets/images/gallery/gallery-${String(n).padStart(2,"0")}.jpg`,alt:`Tina gallery photo ${n}`,caption:["Tina after a recording session","Tina chilling in bed","Tina as a vampire","Tina nun cosplay","Tina younger","Tina takes a nap"][n-1]}));let current=0,lastFocus=null;const update=(i)=>{current=(i+photos.length)%photos.length;const p=photos[current];image.classList.add("is-changing");setTimeout(()=>{image.src=p.src;image.alt=p.alt;caption.textContent=p.caption;counter.textContent=`${current+1} / ${photos.length}`;thumbs.forEach((t,j)=>{t.classList.toggle("is-active",j===current);j===current?t.setAttribute("aria-current","true"):t.removeAttribute("aria-current")});image.classList.remove("is-changing")},90)};const open=()=>{lastFocus=document.activeElement;modal.classList.add("is-open");modal.setAttribute("aria-hidden","false");document.body.classList.add("gallery-is-open");update(current);setTimeout(()=>modal.querySelector(".gallery-modal__close")?.focus(),50)};const shut=()=>{modal.classList.remove("is-open");modal.setAttribute("aria-hidden","true");document.body.classList.remove("gallery-is-open");lastFocus?.focus?.()};triggers.forEach(t=>t.addEventListener("click",open));close.forEach(b=>b.addEventListener("click",shut));prev?.addEventListener("click",()=>update(current-1));next?.addEventListener("click",()=>update(current+1));thumbs.forEach(t=>t.addEventListener("click",()=>update(Number(t.dataset.galleryIndex))));modal.addEventListener("keydown",e=>{if(e.key==="Escape")shut();if(e.key==="ArrowLeft")update(current-1);if(e.key==="ArrowRight")update(current+1)})});
 
 /* =========================================================
    About Tina / FAQ modal
@@ -407,6 +407,97 @@ document.addEventListener("DOMContentLoaded", () => {
         if (event.key === "Escape") {
             closeModal();
         }
+    });
+});
+
+/* =========================================================
+   Tina Store / Payment links
+   =========================================================
+
+   HOW TO CONNECT PAYPAL
+   ---------------------
+   1. Create one payment link for each album in PayPal.
+   2. Paste each complete payment URL below in "paymentUrl".
+   3. Leave the ZIP files OUT of public URLs for now.
+
+   Important: this front-end code redirects the buyer to the payment page,
+   but it cannot securely verify a completed payment by itself. Automatic,
+   protected ZIP delivery requires server-side payment verification (webhook
+   or equivalent). Until that is added, delivery should remain manual.
+*/
+
+document.addEventListener("DOMContentLoaded", () => {
+    const STORE_PRODUCTS = {
+        "neon-outlaws-digital": {
+            name: "Neon Outlaws — Digital Album",
+            price: "$9.99",
+            paymentUrl: "https://paypal.me/TinaVale666/9.99"
+        },
+        "cyber-dreams-digital": {
+            name: "Cyber Dreams — Digital Album",
+            price: "$9.99",
+            paymentUrl: "https://paypal.me/TinaVale666/9.99"
+        }
+    };
+
+    const purchaseButtons = [...document.querySelectorAll(".purchase-button")];
+
+    if (!purchaseButtons.length) {
+        return;
+    }
+
+    const isConfiguredPaymentUrl = (url) => {
+        if (!url || typeof url !== "string") {
+            return false;
+        }
+
+        return /^https:\/\//i.test(url) && !url.includes("PASTE_");
+    };
+
+    purchaseButtons.forEach((button) => {
+        const productId = button.dataset.productId;
+        const product = STORE_PRODUCTS[productId];
+
+        if (!product) {
+            console.warn(`Unknown Tina Store product: ${productId}`);
+            return;
+        }
+
+        button.setAttribute(
+            "aria-label",
+            `Buy ${product.name} for ${product.price}`
+        );
+
+        button.addEventListener("click", () => {
+            if (!isConfiguredPaymentUrl(product.paymentUrl)) {
+                window.alert(
+                    `${product.name} is ready, but its payment link has not been connected yet.`
+                );
+                return;
+            }
+
+            const continueToPayment = window.confirm(
+                `You are buying ${product.name} for ${product.price}.\n\n` +
+                `Please write the album name in the PayPal payment note if possible.\n\n` +
+                `After payment, contact Tina at xxtinavalexx@hotmail.com and specify the album you purchased. ` +
+                `Your download will be sent after payment confirmation.\n\n` +
+                `Press OK to continue to PayPal.`
+            );
+
+            if (!continueToPayment) {
+                return;
+            }
+
+            const paymentWindow = window.open(
+                product.paymentUrl,
+                "_blank",
+                "noopener,noreferrer"
+            );
+
+            if (!paymentWindow) {
+                window.location.href = product.paymentUrl;
+            }
+        });
     });
 });
 
