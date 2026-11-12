@@ -359,3 +359,54 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+/* =========================================================
+   Unreleased songs modal
+   ========================================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.querySelector("#unreleased-modal");
+    const triggers = [...document.querySelectorAll(".unreleased-trigger")];
+
+    if (!modal || !triggers.length) {
+        return;
+    }
+
+    const closeButtons = [...modal.querySelectorAll("[data-unreleased-close]")];
+    let lastFocusedElement = null;
+
+    const openModal = () => {
+        lastFocusedElement = document.activeElement;
+        modal.classList.add("is-open");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("faq-is-open");
+
+        window.setTimeout(() => {
+            modal.querySelector(".faq-modal__close")?.focus();
+        }, 50);
+    };
+
+    const closeModal = () => {
+        modal.classList.remove("is-open");
+        modal.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("faq-is-open");
+
+        if (lastFocusedElement instanceof HTMLElement) {
+            lastFocusedElement.focus();
+        }
+    };
+
+    triggers.forEach((trigger) => {
+        trigger.addEventListener("click", openModal);
+    });
+
+    closeButtons.forEach((button) => {
+        button.addEventListener("click", closeModal);
+    });
+
+    modal.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            closeModal();
+        }
+    });
+});
+
